@@ -1,7 +1,7 @@
 float Va;
 float Vb;
 float Vab;
-int leds[12]={2,3,4,5,6,7,8,9,10,11,12};
+int leds[11]={2,3,4,5,6,7,8,9,10,11,12};
 
 int ledRojo4=leds[0];
 int ledRojo3=leds[1];
@@ -18,7 +18,7 @@ int ledVerde1=leds[10];
 void setup()
 {
   Serial.begin(9600);
-  for (int i = 0; i < 12; i++){
+  for (int i = 0; i < 11; i++){
     pinMode(leds[i], OUTPUT);
   }
 }
@@ -115,7 +115,7 @@ void loop()
     digitalWrite(ledRojo3, LOW);
   }
 ////////////////////////////////+88  
-  if (Vab<0.95)
+  if (Vab<0.66)
   {
     do
     {
